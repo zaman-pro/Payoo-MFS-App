@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- daisyUI cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-slate-800">
+    <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+      <!-- header -->
+      <header>
+        <nav class="flex justify-around items-center">
+          <div class="flex items-center gap-4">
+            <img class="w-16" src="./assets/logo.png" alt="" />
+            <div>
+              <h1 class="text-3xl font-bold">
+                $
+                <span id="main-balance">5000</span>
+              </h1>
+              <p class="border rounded p-1">Available Balance</p>
+            </div>
+          </div>
+
+          <button
+            id="logout-btn"
+            class="btn btn-neutral bg-red-500 border-none"
+          >
+            Logout
+          </button>
+        </nav>
+
+        <section class="mt-10">
+          <h1 class="text-2xl font-bold mb-2">Welcome to Payooo!</h1>
+          <p>
+            Enjoy easy and convenient financial services with us. Cashout charge
+            is low and
+          </p>
+
+          <div class="cards grid grid-cols-3 mt-2 gap-2 p-2 cursor-pointer">
+            <div
+              class="box hover:bg-sky-50 0 border p-4 text-center rounded-2xl"
+            >
+              <img class="w-6 mx-auto" src="./assets/add-money.png" alt="" />
+              <h3>Add Money</h3>
+            </div>
+            <div class="box hover:bg-sky-50 border p-4 text-center rounded-2xl">
+              <img class="w-6 mx-auto" src="./assets/cashout.png" alt="" />
+              <h3>Add Money</h3>
+            </div>
+            <div class="box hover:bg-sky-50 border p-4 text-center rounded-2xl">
+              <img
+                class="w-6 mx-auto"
+                src="./assets/transfer-money.png"
+                alt=""
+              />
+              <h3>Add Money</h3>
+            </div>
+            <div class="box hover:bg-sky-50 border p-4 text-center rounded-2xl">
+              <img class="w-6 mx-auto" src="./assets/bonus.png" alt="" />
+              <h3>Add Money</h3>
+            </div>
+            <div class="box hover:bg-sky-50 border p-4 text-center rounded-2xl">
+              <img class="w-6 mx-auto" src="./assets/pay-bill.png" alt="" />
+              <h3>Add Money</h3>
+            </div>
+            <div class="box hover:bg-sky-50 border p-4 text-center rounded-2xl">
+              <img class="w-6 mx-auto" src="./assets/transactions.png" alt="" />
+              <h3>Add Money</h3>
+            </div>
+          </div>
+
+          <section>
+            <h2>Add Money</h2>
+
+            <div class="">
+              <div class="hero-content flex-col lg:flex-row-reverse">
+                <div
+                  class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+                >
+                  <form class="card-body">
+                    <fieldset class="fieldset">
+                      <legend>Select Bank</legend>
+                      <select class="select">
+                        <option disabled selected>Select a Bank</option>
+                        <option value="Bkash">Bkash</option>
+                        <option value="Rocket">Rocket</option>
+                        <option value="Nagad">Nagad</option>
+                        <option value="Upay">Upay</option>
+                        <option value="DBBL">DBBL</option>
+                        <option value="Cellphin">Cellphin</option>
+                      </select>
+                      <label class="fieldset-label">Account Number</label>
+                      <input
+                        id="account-number"
+                        value="12345678901"
+                        type="number"
+                        class="input"
+                        placeholder="Enter your account number"
+                        required
+                      />
+                      <label class="fieldset-label">Amount to Add</label>
+                      <input
+                        id="amount"
+                        type="number"
+                        class="input"
+                        placeholder="Enter your amount"
+                        required
+                      />
+                      <label class="fieldset-label">PIN</label>
+                      <input
+                        id="pin"
+                        type="password"
+                        value="1234"
+                        class="input"
+                        placeholder="Enter your pin"
+                        required
+                      />
+                      <button
+                        id="add-money-btn"
+                        class="btn btn-neutral bg-blue-600 border-none mt-4"
+                      >
+                        Add Money
+                      </button>
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </header>
+    </section>
+
+    <script src="./scripts/addMoney.js"></script>
+  </body>
+</html>
