@@ -1,14 +1,12 @@
 document
-  .getElementById("add-money-btn")
+  .getElementById("cash-out-btn")
   .addEventListener("click", function (event) {
     event.preventDefault();
 
-    const amount = parseFloat(
-      document.getElementById("add-money-amount").value
-    );
-    const pin = parseInt(document.getElementById("add-money-pin").value);
+    const amount = parseFloat(document.getElementById("cash-out-amount").value);
+    const pin = parseFloat(document.getElementById("cash-out-pin").value);
     const accountNumber = document.getElementById(
-      "add-money-account-number"
+      "cash-out-account-number"
     ).value;
     const mainBalance = parseFloat(
       document.getElementById("main-balance").innerText
@@ -17,8 +15,7 @@ document
     if (amount && pin && accountNumber) {
       if (accountNumber.length === 11) {
         if (pin === 1234) {
-          newBalance = mainBalance + amount;
-
+          newBalance = mainBalance - amount;
           document.getElementById("main-balance").innerText = newBalance;
         } else {
           alert("Incorrect PIN");
